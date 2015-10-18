@@ -1,2 +1,36 @@
-xlattice/TODO
+~/dev//xlattice/TODO
 
+2015-10-17
+    * create github xlattice project                                * DONE
+    * links from {README,index}.md to
+        - Cluster                                                   * DONE
+        - Gateway
+        - Node                                                      * DONE
+        - NodeID                                                    * DONE
+        - Overlay
+        - Peer
+        - Protocol
+            * AesCnx
+        - Transport
+    * rough out XLattice abstractions
+        - Cluster                                                   * DONE
+        - Gateway
+        - Node                                                      * DONE
+        - NodeID                                                    * DONE
+        - Overlay
+        - Peer
+        - Protocol
+            * AesCnx
+        - Transport
+    * rough out `ommon utility classes
+        - BuildList
+        - Ctrie
+        - HAMT
+        - MerkleTree
+        - NLHTree
+        - rnglib
+        - U 
+        - Upax
+        - xlReg
+
+    * add graphics as needed to all XLattice abstraction pages
