@@ -1,5 +1,8 @@
 ~/dev//xlattice/TODO
 
+2015-10-18
+    * BUG IN pySloc: *.md files in ghpDoc not counted
+
 2015-10-17
     * create github xlattice project                                * DONE
     * links from {README,index}.md to

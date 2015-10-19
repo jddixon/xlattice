@@ -1,7 +1,11 @@
 xlattice/CHANGES
 
+v0.1.0
+    2015-10-18
+        add rough defs of cluster, node, nodeID
 v0.0.0
     2015-10-17
         initial commit                                              SLOC    5
+
 
 
