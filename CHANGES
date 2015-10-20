@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.1
+    2015-10-19
+        add rough defs of baseNode, gateway, peer
 v0.1.0
     2015-10-18
         add rough defs of cluster, node, nodeID

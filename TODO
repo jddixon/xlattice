@@ -17,6 +17,7 @@
         - Transport
     * rough out XLattice abstractions
         - Cluster                                                   * DONE
+        - Connector
         - Gateway
         - Node                                                      * DONE
         - NodeID                                                    * DONE
