@@ -1,11 +1,12 @@
 ~/dev//xlattice/TODO
 
 2015-10-18
-    * BUG IN pySloc: *.md files in ghpDoc not counted
+    * BUG IN pySloc: *.md files in ghpDoc not counted               * FIXED
 
 2015-10-17
     * create github xlattice project                                * DONE
     * links from {README,index}.md to
+        - BaseNode
         - Cluster                                                   * DONE
         - Gateway
         - Node                                                      * DONE
@@ -16,13 +17,14 @@
             * AesCnx
         - Transport
     * rough out XLattice abstractions
+        - BaseNode                                                  * DONE
         - Cluster                                                   * DONE
         - Connector
-        - Gateway
+        - Gateway                                                   * DONE
         - Node                                                      * DONE
         - NodeID                                                    * DONE
         - Overlay
-        - Peer
+        - Peer                                                      * DONE
         - Protocol
             * AesCnx
         - Transport
@@ -36,5 +38,3 @@
         - U 
         - Upax
         - xlReg
-
-    * add graphics as needed to all XLattice abstraction pages
