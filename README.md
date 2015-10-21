@@ -15,3 +15,8 @@
 ## Utilities
 
 These are libraries and servers used by XLattice components.
+
+* [BuildList](https://jddixon.github.io/xlattice/buildList.html)
+* [HAMT](https://jddixon.github.io/xlattice/hamt.html)
+* [MerkleTree](https://jddixon.github.io/xlattice/merkleTree.html)
+* [NLHTree](https://jddixon.github.io/xlattice/nlhTree.html)

@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.2
+    2015-10-21
+        * rough out BuildList, HAMT, MerkleTree, NLHTree            SLOC   517
 v0.1.1
     2015-10-19
         add rough defs of baseNode, gateway, peer

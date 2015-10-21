@@ -1,8 +1,15 @@
 pySloc -v $@ \
     bash:countem                    \
-    txt:README.md                   \ 
-    txt:ghpDoc/index.md             \
+    txt:README.md                   \
+    txt:ghpDoc/baseNode.md          \
+    txt:ghpDoc/buildList.md         \
     txt:ghpDoc/cluster.md           \
+    txt:ghpDoc/gateway.md           \
+    txt:ghpDoc/hamt.md              \
+    txt:ghpDoc/index.md             \
+    txt:ghpDoc/merkleTree.md        \
+    txt:ghpDoc/nlhTree.md           \
     txt:ghpDoc/node.md              \
     txt:ghpDoc/nodeID.md            \
+    txt:ghpDoc/peer.md              \
 
