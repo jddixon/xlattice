@@ -17,7 +17,7 @@ cryptograpic identity.  That is, each has</p>
 <ul>
 <li>a <a href="https://jddixon.github.io/xlattice/nodeID.html"> NodeID</a>,</li>
 <li>an RSA key used for creating digital signatures (<strong>skPriv</strong>), and</li>
-<li>an RSA key used for encrypting data (<strong>ckPriv</strong>).<br /></li>
+<li>an RSA key used for encrypting data (<strong>ckPriv</strong>).</li>
 </ul>
 
 <p>In other words each cluster member is
@@ -25,13 +25,14 @@ or carries an
 <a href="https://jddixon.github.io/xlattice/node.html">XLattice Node</a>,
 which incorporates that cryptographic identity.</p>
 
-<p>The NodeID is a unique 160- or 256-bit number.<br />
-Each of <code>skPriv</code> and <code>ckPriv</code>is a RSA private key, normally
+<p>The NodeID is a unique 160- or 256-bit number.</p>
+
+<p>Each of <code>skPriv</code> and <code>ckPriv</code>is a RSA private key, normally
 at least 2048 bits in length.  Each has a corresponding public key
 (<strong>sk</strong> and <strong>ck</strong> respectively) which can be distributed freely without
 compromising the secrecy of its private key counterpart.</p>
 
-<p>You open communications with an XLattice node by using it well-known
+<p>You open communications with an XLattice node by using its well-known
 public key <code>ck</code> to encrypt a secret, one that only that cluster member can
 decrypt, because only that node (cluster member) has the corresponding private
 key.  The secret is an AES key.  The RSA-encrypted secret is used to encrypt
@@ -41,7 +42,7 @@ The cluster member sends the encrypted second key back to whoever has
 initiated the conversation, and further messages between the two machines
 are encrypted using the second key.</p>
 
-<p>The members of the cluster have at least two well-known ports.  These
+<p>Each member of the cluster has at least two well-known ports.  These
 are 16-bit numbers, as is conventional on network servers.  All of the
 members will listen on one of the ports (the same 16-bit number on each
 member) for messages from other members of the cluster.  This port number

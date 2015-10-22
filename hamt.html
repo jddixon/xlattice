@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="content">
-<p>#hamt</p>
+<h1>hamt</h1>
 
 <p>An implementation of the HAMT data structure.</p>
 
@@ -27,7 +27,7 @@ are either tables or leaf entries.</p>
 or a table with up to <code>2^w</code> slots, where w is a small
 integer.  The next <code>w</code> bits of the hash
 derived from the key are construed as an index into that table.  The
-table grows dynamically to its maximum number of slots as entries are added.<br />
+table grows dynamically to its maximum number of slots as entries are added.
 Whenever there is a
 collision at a given level, a pointer to a new table replaces the current
 leaf entry,
@@ -58,7 +58,7 @@ as needed.</p>
 <li><p>This code is not thread-safe.  That is, using code must provide any
 necessary locking.</p></li>
 
-<li><p>the HAMT algorithm depends upon bit-counting.  On modern Intel and AMD
+<li><p>The HAMT algorithm depends upon bit-counting.  On modern Intel and AMD
 processors this
 can be done using a specific machine-language instruction, POPCNT.  Current
 XLattice implementations of HAMT emulates this in software using the
