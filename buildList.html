@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>buildList</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1>buildList</h1>
+
+<h2>Serialization</h2>
+
+<p>In its serialized form a BuildList consists of
+* a public key line,
+* a title line,
+* a timestamp line,
+* a number of content lines, and
+* optionally a digital signature.</p>
+
+<p>Each of the lines ends with a linefeed (a byte with the value 10,
+conventionally written as \n).</p>
+
+<p>A blank line follows the last content line.  The timestamp (in
+CCYY-MM-DD HH:MM:SS form) represents the time at which the list
+was signed using the RSA private key corresponding to the key in
+the public key line.  The public key itself is base-64 encoded.</p>
+
+<h2>Content Lines</h2>
+
+<p>The content lines section begins and ends with fixed <code># BEGIN CONTENT #</code>
+and <code># END CONTENT #</code> delimiters.  Each actual content line consists of
+* either a directory name or
+* a file name followed by its content hash.<br />
+In either case the name
+is indented by a number of spaces equivalent to its depth in the hierarchy.</p>
+
+<pre><code># BEGIN CONTENT #
+dir1
+ fileForHash0 0123456789012345678901234567890123456789
+ fileForHash1 abcdef0123456789abcdef0123456789abcdef01
+dir11
+  fileForHash2 12abcdef0123456789abcdef0123456789abcdef
+  fileForHash3 3456abcdef0123456789abcdef0123456789abcd
+# END CONTENT #
+</code></pre>
+
+<p>That is, the data structure between the BEGIN/END CONTENT lines is an
+<a href="http://jddixon.github.io/nlhtree">NLHTree</a>.</p>
+
+<h2>Digital Signature</h2>
+
+<p>The SHA1withRSA digital signature is over the entire SignedList excluding
+the digital signature line and the blank line preceding it.  All line
+endings are converted to LF (&rsquo;\n&rsquo;) before taking the digital signature.</p>
+
+<h2>Extended Hash</h2>
+
+<p>The BuildList itself has a 20-byte extended hash, the 20-byte SHA1
+digest of a function of the public key and the title.  This means
+that the owner of the RSA key can create any number of documents
+with the same hash but different timestamps with the intention
+being that users can choose to regard the document with the most
+recent timestamp as current.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/buildList">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="http://www.xlattice.org">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

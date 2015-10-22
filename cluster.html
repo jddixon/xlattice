@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>cluster</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice Cluster</h1>
+
+<p>An XLattice cluster is a group of cooperating servers.  Each has a
+cryptograpic identity.  That is, each has</p>
+
+<ul>
+<li>a <a href="https://jddixon.github.io/xlattice/nodeID.html"> NodeID</a>,</li>
+<li>an RSA key used for creating digital signatures (<strong>skPriv</strong>), and</li>
+<li>an RSA key used for encrypting data (<strong>ckPriv</strong>).<br /></li>
+</ul>
+
+<p>In other words each cluster member is
+or carries an
+<a href="https://jddixon.github.io/xlattice/node.html">XLattice Node</a>,
+which incorporates that cryptographic identity.</p>
+
+<p>The NodeID is a unique 160- or 256-bit number.<br />
+Each of <code>skPriv</code> and <code>ckPriv</code>is a RSA private key, normally
+at least 2048 bits in length.  Each has a corresponding public key
+(<strong>sk</strong> and <strong>ck</strong> respectively) which can be distributed freely without
+compromising the secrecy of its private key counterpart.</p>
+
+<p>You open communications with an XLattice node by using it well-known
+public key <code>ck</code> to encrypt a secret, one that only that cluster member can
+decrypt, because only that node (cluster member) has the corresponding private
+key.  The secret is an AES key.  The RSA-encrypted secret is used to encrypt
+a second key,
+the AES key used for the rest of the messages in the communications session.
+The cluster member sends the encrypted second key back to whoever has
+initiated the conversation, and further messages between the two machines
+are encrypted using the second key.</p>
+
+<p>The members of the cluster have at least two well-known ports.  These
+are 16-bit numbers, as is conventional on network servers.  All of the
+members will listen on one of the ports (the same 16-bit number on each
+member) for messages from other members of the cluster.  This port number
+will not generally be published: it is private to the cluster and any
+messages received on this port from other hosts (other machines on the
+network but not members of the cluster) will be ignored.</p>
+
+<p>The second port, whose 16-bit number is shared by all members of the cluster,
+is used for communications between members of the cluster and the outside
+world.  That is, this port number will generally be published, and clients
+(legitimate users of the cluster&rsquo;s services) communicate with the cluster
+through this port using whatever protocol is appropriate for the service
+provided by the cluster.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/cluster">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="http://www.xlattice.org">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
