@@ -1,8 +1,15 @@
 xlattice/CHANGES
 
+v0.1.4
+    2015-10-23
+        * many minor edits; add Transport                           SLOC  527
+v0.1.3 
+    2015-10-22
+        * add links from {README,index}.md to utility pages         SLOC  521
+        * minor edits (correct typos, etc)                          SLOC  525
 v0.1.2
     2015-10-21
-        * rough out BuildList, HAMT, MerkleTree, NLHTree            SLOC   517
+        * rough out BuildList, HAMT, MerkleTree, NLHTree            SLOC  517
 v0.1.1
     2015-10-19
         add rough defs of baseNode, gateway, peer
@@ -11,7 +18,7 @@ v0.1.0
         add rough defs of cluster, node, nodeID
 v0.0.0
     2015-10-17
-        initial commit                                              SLOC    5
+        initial commit                                              SLOC   5
 
 
 

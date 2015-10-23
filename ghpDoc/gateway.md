@@ -21,7 +21,9 @@ or they might route traffic through an unusual protocol such as email
 they may prefer to route traffic through a public service such as 
 [Tor](https://www.torproject.org).
 
-A Gateway is not the same as a router, although it may be resident on
+A Gateway is not the same as a 
+[router,](https://en.wikipedia.org/wiki/Router_(computing))
+although it may be resident on
 a router.  A Node communicating with an otherwise unreachable Node sends
 messages through an Internet Protocol (IP) network to the Gateway, which
 forwards the messages though an address on the remote Overlay to the 

@@ -6,6 +6,7 @@
 * [Gateway](https://jddixon.github.io/xlattice/gateway.html)
 * [Node](https://jddixon.github.io/xlattice/node.html)
 * [NodeID](https://jddixon.github.io/xlattice/nodeID.html)
+* [Transport](https://jddixon.github.io/xlattice/transport.html)
 
 ## Related Abstractions
 

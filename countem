@@ -12,4 +12,5 @@ pySloc -v $@ \
     txt:ghpDoc/node.md              \
     txt:ghpDoc/nodeID.md            \
     txt:ghpDoc/peer.md              \
+    txt:ghpDoc/transport.md         \
 
