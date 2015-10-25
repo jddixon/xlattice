@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.5
+    2015-10-25
+        * minor edits; add Overlay                                  SLOC  640
 v0.1.4
     2015-10-23
         * many minor edits; add Transport                           SLOC  527

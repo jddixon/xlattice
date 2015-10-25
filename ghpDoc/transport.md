@@ -7,7 +7,7 @@ XLattice
 communicate by sending messages over connections.  The primitive
 notions common to all xLattice connections are
 
-* **Acceptor **, an EndPoint on which a Node listens
+* **Acceptor**, an EndPoint on which a Node listens
 * **Address**, a sequence of bytes distinguishing EndPoints
 * **Connection**, a pair of EndPoints enabling communications between
   the Nodes at either end
