@@ -11,6 +11,7 @@ pySloc -v $@ \
     txt:ghpDoc/nlhTree.md           \
     txt:ghpDoc/node.md              \
     txt:ghpDoc/nodeID.md            \
+    txt:ghpDoc/overlay.md           \
     txt:ghpDoc/peer.md              \
     txt:ghpDoc/transport.md         \
 
