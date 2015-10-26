@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>overlay</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1>XLattice Overlay</h1>
+
+<p>An Overlay is characterized by an address space, a transport protocol,
+and possibly a set of rules for navigating the address space using
+the protocol.</p>
+
+<p>An Overlay may either be system-supported, like TCP/IP will
+normally be, or it may explicitly depend upon an underlying
+Overlay, in the way that HTTP, for example, is generally
+implemented over TCP/IP.</p>
+
+<p>If the Overlay is system-supported, traffic will be routed and
+neighbors will be reached by making calls to operating system
+primitives such as sockets.</p>
+
+<p>In some Overlays there is a method which, given an EndPoint <code>x</code>, returns
+another EndPoint <code>g</code>, a <strong>gateway</strong>, which can be used to route messages to
+EndPoint <code>x</code>.</p>
+
+<h2>Examples of Overlays</h2>
+
+<ul>
+<li>the global Internet, <code>0/0</code>, a set of 32-bit addresses administered by
+<a href="http://iana.org">IANA</a>,
+the Internet Assigned Numbers Authority</li>
+<li>private IP address space, small blocks of the global Internet reserved
+for private use; these are usually in <code>10/8</code> or <code>/16</code>s in  <code>192.168</code></li>
+<li><strong>email-mediated</strong>, where gateways convert messages into email and then
+use conventional email protocols (<code>SMTP</code>) to transport and store messages</li>
+<li><strong>data-keyed</strong>, where machines exchange traffic through a content-keyed
+storage system</li>
+<li><strong>name-keyed</strong>, where systems exchange traffic through a distributed system
+storing values by name (the key)</li>
+</ul>
+
+<h2>Gateways</h2>
+
+<p>A
+<a href="https://jddixon.github.io/xlatice/gateway.html">Gateway</a>
+is an
+<a href="https://jddixon.github.io/xlattice/node.html">XLattice Node</a>
+which can be used for routing traffic between Overlays.  The Gateway
+can simply forward message with headers added or altered as necessary
+to route traffic, or the message content may be altered as necessitated
+for example by protocol switching or encryption.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/overlay">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="http://www.xlattice.org">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
