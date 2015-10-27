@@ -14,4 +14,8 @@ pySloc -v $@ \
     txt:ghpDoc/overlay.md           \
     txt:ghpDoc/peer.md              \
     txt:ghpDoc/transport.md         \
+    txt:ghpDoc/clusterReg.md        \
+    txt:ghpDoc/xlReg.md             \
+    txt:ghpDoc/xlReg_protobuf.md    \
+    txt:ghpDoc/xlReg_protocol.md    \
 

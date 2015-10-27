@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.6
+    2015-10-27
+        * add 4 xlReg pages                                         SLOC 1072
 v0.1.5
     2015-10-25
         * minor edits; add Overlay                                  SLOC  640
