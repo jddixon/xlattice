@@ -27,3 +27,5 @@ These are libraries used by XLattice components.
 
 These are servers and tools used by XLattice components.
 
+* [xlReg](https://jddixon.github.io/xlattice/xlReg.html)
+
