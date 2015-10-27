@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>xlReg</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">xlReg</h1>
+
+<p><a href="clusterReg.html">xlReg</a> is a tool, primarily intended for use in testing,
+which facilitates the formation of
+<a href="https://jddixon.github.io/xlattice/cluster.html">clusters,</a>
+groups of cooperating
+<a href="https://jddixon.github.io/xlattice/node.html">nodes.</a></p>
+
+<p>On registration, a client (an xLattice cluster member)
+is issued a globally unique NodeID, a 256-bit random value.
+Once it has an ID, the member can create and/or join clusters.</p>
+
+<p>A cluster has
+a maximum size set when it is created.  When members join the cluster they
+register their two RSA public keys and one or more IP addresses.
+If the cluster only supports communications between members, members
+register only one IP address.  If non-member clients are allowed to
+communicate with the cluster, members register a second address for
+that purpose.  It is possible that certain applications may require
+additional IP addresses.  (The first address is used for communications
+between cluster members.  Any second address is used for communications
+between cluster members acting as servers and their clients.)</p>
+
+<p>When a member has completed registration, it can retrieve
+the configuration data other members have registered.</p>
+
+<p>The xlReg server, its clients, and the cluster members, are all
+<a href="https://jddixon.github.io/xlattice/node.html">XLattice nodes</a>
+which means that each has</p>
+
+<ul>
+<li>a unique <a href="https://jddixon.github.io/xlattice/nodeID.html">NodeID</a></li>
+<li>two RSA keys, one for encrypting data and the other for creating
+digital signatures</li>
+<li>at least one address (such as a TCP/IP connection) on which it
+listens at all times</li>
+<li>and optionally a local file system</li>
+</ul>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/xlReg">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="http://www.xlattice.org">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
