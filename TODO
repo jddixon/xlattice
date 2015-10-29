@@ -3,19 +3,7 @@
 2015-10-18
     * BUG IN pySloc: *.md files in ghpDoc not counted               * FIXED
 
-2015-10-17
-    * create github xlattice project                                * DONE
-    * links from {README,index}.md to
-        - BaseNode
-        - Cluster                                                   * DONE
-        - Gateway
-        - Node                                                      * DONE
-        - NodeID                                                    * DONE
-        - Overlay
-        - Peer
-        - Protocol
-            * AesCnx
-        - Transport
+2015-10-27, edited from -17
     * rough out XLattice abstractions
         - BaseNode                                                  * DONE
         - Cluster                                                   * DONE
@@ -28,13 +16,21 @@
         - Protocol
             * AesCnx
         - Transport
-    * rough out `ommon utility classes
+    * rough out related abstractions
+        - Acceptor
+        - Address
+        - AESCnx
+        - BaseNode
         - BuildList
-        - Ctrie
+        - Connei
+         Ctrie
         - HAMT
         - MerkleTree
         - NLHTree
         - rnglib
         - U 
+    * rough out servers
         - Upax
-        - xlReg
+        - xlReg                                                     * DONE
+    
+    * links from {README,index}.md to above
