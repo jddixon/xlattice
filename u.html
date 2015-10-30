@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>u</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice U</h1>
+
+<p>Content-keyed directory structures for
+<a href="https://jddixon.github.io/xlattice">xlattice,</a>
+a file system
+based on <strong>content keys</strong>, where a content key is a cryptographically
+secure hash either 20 or 32 bytes long.</p>
+
+<h2>Directory Structure</h2>
+
+<p><strong>U* is optimized for storing very large numbers of files.  The
+first byte of the content key determines which mid-level directory
+the file goes in; the second byte determines its lower-level
+directory.  The upper-level directory is conventionally called **<code>U</code></strong>.</p>
+
+<p>So if a file&rsquo;s content hash is <code>abcdef...1234</code>, then it
+will usually be stored in <code>U/ab/cd/ef...1234</code>.  There are 256 mid-level
+directories and 256 subdirectories below each of these, so there are
+256x256 = 65536 such lower-level directories.</p>
+
+<p>There will also be at least two more subdirectories at the upper level</p>
+
+<ul>
+<li><code>U/in</code>, used for assembling files prior to being moved into the
+appropriate lower directory; typically used for files being
+received over the wire</li>
+<li><code>U/tmp</code>, similarly used by the system for temporary storage of files
+being moved into <code>U/</code> from the local file system</li>
+</ul>
+
+<h2>Content Keys</h2>
+
+<p>Hashes are calculated using
+a variant of the
+<a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithm">Secure Hash Algorithm</a>.
+Currently three versions of SHA are supported:</p>
+
+<ul>
+<li><strong>SHA1</strong> (20 bytes/160 bits), also called SHA-1</li>
+<li><strong>SHA2</strong> (32 bytes/256 bits), also called SHA-256</li>
+<li><strong>SHA3</strong> (32 bytes/256 bits), which is the 256-bit variant of <strong>Keccak</strong>,
+the winner of a recent competition run by an agency of the US government</li>
+</ul>
+
+<h2>API</h2>
+
+<p>Pseudo code: function name, parameter list, and values returned.  Parameter
+type follows the paramter name.</p>
+
+<pre><code>// Copy a data file into U.
+CopyAndPut(path string, key []byte) (int64, error)
+CopyAndPut1(path, key string) (int64, string, error)
+CopyAndPut2(path, key string) (int64, string, error)
+CopyAndPut3(path, key string) (int64, string, error)
+
+// Retrieve a data file from U.
+GetData(key []byte) ([]byte, error)
+GetData1(key string) (data []byte, err error)
+GetData2(key string) (data []byte, err error)
+GetData3(key string) (data []byte, err error)
+
+// Move a data file into U.
+Put(inFile string, key []byte) (length int64, err error)
+Put1(inFile, key string) (length int64, hash string, err error)
+Put2(inFile, key string) (length int64, hash string, err error)
+Put3(inFile, key string) (length int64, hash string, err error)
+
+// Write a block of data into U; the length and actual h
+// are returned.
+PutData(data []byte, key []byte) (length int64, hash []byte, err error)
+PutData1(data []byte, key string) (length int64, hash string, err error)
+PutData2(data []byte, key string) (length int64, hash string, err error)
+PutData3(data []byte, key string) (length int64, hash string, err error)
+
+GetDirStruc() DirStruc
+GetPath() string
+
+// These functions take two forms, for convenience
+HexKeyExists(key string) (bool, error)
+ByteKeyExists(key []byte) (bool, error)
+
+HexKeyFileLen(key string) (length int64, err error)
+ByteKeyFileLen(key []byte) (length int64, err error)
+
+GetPathForHexKey(key string) (string, error)
+GetPathForByteKey(key []byte) (string, error)
+</code></pre>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/u">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="http://www.xlattice.org">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
