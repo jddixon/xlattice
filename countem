@@ -4,6 +4,8 @@ pySloc -v $@ \
     txt:ghpDoc/baseNode.md          \
     txt:ghpDoc/buildList.md         \
     txt:ghpDoc/cluster.md           \
+    txt:ghpDoc/clusterReg.md        \
+    txt:ghpDoc/ftLog.md             \
     txt:ghpDoc/gateway.md           \
     txt:ghpDoc/hamt.md              \
     txt:ghpDoc/index.md             \
@@ -14,7 +16,11 @@ pySloc -v $@ \
     txt:ghpDoc/overlay.md           \
     txt:ghpDoc/peer.md              \
     txt:ghpDoc/transport.md         \
-    txt:ghpDoc/clusterReg.md        \
+    txt:ghpDoc/u.md                 \
+    txt:ghpDoc/upax.md              \
+    txt:ghpDoc/upaxClient.md        \
+    txt:ghpDoc/upaxMirror.md        \
+    txt:ghpDoc/upaxServer.md        \
     txt:ghpDoc/xlReg.md             \
     txt:ghpDoc/xlReg_protobuf.md    \
     txt:ghpDoc/xlReg_protocol.md    \
