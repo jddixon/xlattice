@@ -22,6 +22,7 @@ These are libraries used by XLattice components.
 * [HAMT](https://jddixon.github.io/xlattice/hamt.html)
 * [MerkleTree](https://jddixon.github.io/xlattice/merkleTree.html)
 * [NLHTree](https://jddixon.github.io/xlattice/nlhTree.html)
+* [U](https://jddixon.github.io/xlattice/u.html)
 
 ## Utilities
 
