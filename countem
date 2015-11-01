@@ -5,6 +5,7 @@ pySloc -v $@ \
     txt:ghpDoc/buildList.md         \
     txt:ghpDoc/cluster.md           \
     txt:ghpDoc/clusterReg.md        \
+    txt:ghpDoc/cryptoServer.md      \
     txt:ghpDoc/ftLog.md             \
     txt:ghpDoc/gateway.md           \
     txt:ghpDoc/hamt.md              \
