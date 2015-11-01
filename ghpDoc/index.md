@@ -28,6 +28,7 @@ These are libraries used by XLattice components.
 
 These are servers and tools used by XLattice components.
 
+* [CryptoServer](https://jddixon.github.io/xlattice/cryptoServer.html)
 * [Upax](https://jddixon.github.io/xlattice/upax.html)
 * [xlReg](https://jddixon.github.io/xlattice/xlReg.html)
 
