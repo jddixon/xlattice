@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>aesCnx</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice AesCnx Protocols</h1>
+
+<p>This protocol is used by
+<a href="https://jddixon.github.io/xlattice/node.html">XLattice Nodes</a>
+for setting up communications
+sessions with
+<a href="https://jddixon.github.io/xlattice/peer.html">Peers</a>
+or other
+XLattice nodes
+where the initiating Node knows the public RSA key associated with an
+address.</p>
+
+<ul>
+<li>the initiator selects a temporary 256-bit/32-byte AES session key,
+encrypts it using the respondent&rsquo;s RSA public key and
+<a href="https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding">RSA OAEP</a>,
+and sends the result to the server, which is an XLattice Peer</li>
+<li>the server chooses the actual 32-byte AES session key, encrypts that using
+the temporary AES key, and sends this back to the initiator</li>
+<li>the initiator uses the temporary AES key to decrypt the response, and
+extracts the real AES session key</li>
+<li>the session continues with both sides using the real session key</li>
+</ul>
+
+<p>The Nodes involved, the initiator and the respondent, may use any mutually
+agreed protocol to continue the session.  That may include a procedure
+for changing the session key, as is prudent in any longer-term session.
+It is probably also advisable to change the session key at least once an hour
+if there are significant levels of traffic on the link.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/aesCnx">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="http://www.xlattice.org">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
