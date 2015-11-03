@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.10
+    2015-11-02
+        * add Protocol, AesCnx, Chunks                              SLOC 1623
 v0.1.9
     2015-10-31
         * CryptoServer                                              SLOC 1533

@@ -7,11 +7,14 @@
 * [Node](https://jddixon.github.io/xlattice/node.html)
 * [NodeID](https://jddixon.github.io/xlattice/nodeID.html)
 * [Overlay](https://jddixon.github.io/xlattice/overlay.html)
+* [Protocol](https://jddixon.github.io/xlattice/protocol.html)
 * [Transport](https://jddixon.github.io/xlattice/transport.html)
 
 ## Related Abstractions
 
+* [AesCnx](https://jddixon.github.io/xlattice/aesCnx.html)
 * [BaseNode](https://jddixon.github.io/xlattice/baseNode.html)
+* [Chunks](https://jddixon.github.io/xlattice/chunks.html)
 * [Peer](https://jddixon.github.io/xlattice/peer.html)
 
 ## Libraries
