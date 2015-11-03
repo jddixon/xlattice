@@ -1,8 +1,10 @@
 pySloc -v $@ \
     bash:countem                    \
     txt:README.md                   \
+    txt:ghpDoc/aesCnx.md            \
     txt:ghpDoc/baseNode.md          \
     txt:ghpDoc/buildList.md         \
+    txt:ghpDoc/chunks.md            \
     txt:ghpDoc/cluster.md           \
     txt:ghpDoc/clusterReg.md        \
     txt:ghpDoc/cryptoServer.md      \
@@ -16,6 +18,7 @@ pySloc -v $@ \
     txt:ghpDoc/nodeID.md            \
     txt:ghpDoc/overlay.md           \
     txt:ghpDoc/peer.md              \
+    txt:ghpDoc/protocol.md          \
     txt:ghpDoc/transport.md         \
     txt:ghpDoc/u.md                 \
     txt:ghpDoc/upax.md              \
