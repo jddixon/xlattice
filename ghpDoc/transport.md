@@ -3,9 +3,9 @@
 ## Basic Abstractions
 
 XLattice
-[Nodes](https://jddixon.github.io/xlattice/node.html
+[Nodes](https://jddixon.github.io/xlattice/node.html)
 communicate by sending messages over connections.  The primitive
-notions common to all xLattice connections are
+notions common to all XLattice connections are
 
 * **Acceptor**, an EndPoint on which a Node listens
 * **Address**, a sequence of bytes distinguishing EndPoints
