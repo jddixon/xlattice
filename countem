@@ -1,6 +1,8 @@
 pySloc -v $@ \
     bash:countem                    \
     txt:README.md                   \
+    txt:ghpDoc/acceptor.md          \
+    txt:ghpDoc/address.md           \
     txt:ghpDoc/aesCnx.md            \
     txt:ghpDoc/baseNode.md          \
     txt:ghpDoc/buildList.md         \
@@ -8,6 +10,7 @@ pySloc -v $@ \
     txt:ghpDoc/cluster.md           \
     txt:ghpDoc/clusterReg.md        \
     txt:ghpDoc/cryptoServer.md      \
+    txt:ghpDoc/endPoint.md          \
     txt:ghpDoc/ftLog.md             \
     txt:ghpDoc/gateway.md           \
     txt:ghpDoc/hamt.md              \
