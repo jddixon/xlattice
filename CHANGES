@@ -1,5 +1,10 @@
 xlattice/CHANGES
 
+v0.1.11
+    2015-11-05
+        * add {address,connection,connector,endPoint}.md            SLOC 1687
+    2015-11-04
+        * add acceptor.md, edit upax{,Client}.md
 v0.1.10
     2015-11-02
         * add Protocol, AesCnx, Chunks                              SLOC 1623
