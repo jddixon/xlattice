@@ -11,13 +11,15 @@
 <div class="content">
 <h1 class="appTop">XLattice Upax Mirror</h1>
 
-<p>A Upax mirror is an XLattice Node and so has a unique 20 or 32-byte nodeID;
+<p>A Upax mirror is an
+<a href="https://jddixon.github.com/xlattice/node.html">XLattice Node</a>
+and so has a unique 20 or 32-byte nodeID;
 two RSA keys, one for encryption/decryption and one for digital
 signatures; some number of listening Acceptors, which accept connections;
 and may some local persistent storage - file space, the local file system.</p>
 
 <p>A Upax mirror differs from a Upax server in that it only accepts
-requests for copies of data.  It may not be used by a client to store
+requests for copies of data.  It may not be used by a Upax client to store
 data in the Upax cluster.</p>
 
 <p>Also, while Upax servers use voting to maintain a consensus on what

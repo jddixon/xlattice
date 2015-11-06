@@ -13,18 +13,18 @@
 
 <p>A distributed content-keyed data storage system.</p>
 
-<h2>Current Implementationi</h2>
+<h2>Current Implementation</h2>
 
 <p>A Upax implementation has three parts:</p>
 
 <ul>
 <li><a href="upaxServer.html">server</a>,</li>
 <li><a href="upaxClient.html">client</a>, and</li>
-<li><a href="ftLog.html">fault-tolerant log</a>.<br /></li>
+<li><a href="ftLog.html">fault-tolerant log</a>.</li>
 </ul>
 
 <p>Upax accepts and stores data files of arbitrary size.  A data file is
-identified by its 256-bit/32-byte (SHA-256 or SHA3-256) content key.<br />
+identified by its 256-bit/32-byte (SHA-256 or SHA3-256) content key.
 The content key is the hash of the file.</p>
 
 <p>Early versions
@@ -41,8 +41,12 @@ to the data store.  That is, clients can use the UpaxMirror as a fast
 local cache, but to add files to the distributed storage system
 they will have to go through a UpaxServer instead.</p>
 
-<p>Upax servers and clients are XLattice nodes and so are identified by
-unique 256 bit keys, NodeIDs.  Each has a pair of RSA keys, one used
+<p>Upax servers and clients are
+<a href="https://jddixon.github.com/xlattice/node.html">XLattice nodes</a>
+and so are identified by
+unique 256 bit keys,
+<a href="https://jddixon.github.com/xlattice/nodeID.html">NodeIDs.</a>
+Each has a pair of RSA keys, one used
 for encryption and one used for digital signatures.  At least in the
 near term Upax servers will only accept messages from known hosts.
 Specifically, a client must prove that it has the private RSA key
