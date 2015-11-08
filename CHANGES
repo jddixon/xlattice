@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.12
+    2015-11-07
+        * update ftLog.md to correct links
 v0.1.11
     2015-11-05
         * add {address,connection,connector,endPoint}.md            SLOC 1687

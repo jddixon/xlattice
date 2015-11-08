@@ -1,4 +1,4 @@
-# hamt
+<h1 class="libTop">XLattice Hash Array Mapped Trie</h1>
 
 An implementation of the HAMT data structure.
 
