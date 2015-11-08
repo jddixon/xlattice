@@ -1,6 +1,8 @@
 xlattice/CHANGES
 
 v0.1.12
+    2015-11-08
+        * add ctries.md                                             SLOC 1753
     2015-11-07
         * update ftLog.md to correct links
 v0.1.11

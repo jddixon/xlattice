@@ -10,6 +10,7 @@ pySloc -v $@ \
     txt:ghpDoc/cluster.md           \
     txt:ghpDoc/clusterReg.md        \
     txt:ghpDoc/cryptoServer.md      \
+    txt:ghpDoc/ctries.md            \
     txt:ghpDoc/endPoint.md          \
     txt:ghpDoc/ftLog.md             \
     txt:ghpDoc/gateway.md           \
