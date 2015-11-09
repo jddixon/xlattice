@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>peer</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice Peer</h1>
+
+<p><a href="https://jddixon.github.io/xlattice">XLattice</a>
+is a library of software supporting
+<a href="https://en.wikipedia.org/wiki/Peer-to-Peer">Peer-to-Peer</a>
+communications.  An XLattice network consists of two or more
+<a href="https://jddixon.github.io/xlattice/node.html">Nodes</a>,
+Each such Node has a cryptographic identity, meaning that it has secret
+keys, the public part of which is known to its Peers, allowing them to
+easily establish secure, encrypted communications between them.  XLattice
+Nodes have interfaces to
+<a href="https://jddixon.github.io/xlattice/overlay.html">Overlays</a>
+such as the global Internet.</p>
+
+<h2>Peers</h2>
+
+<p>To an XLattice Node, a Peer is another XLattice Node, or something which
+behaves like one, with which the Node has established communications,
+or with which it knows how to establish communications.  When an XLattice
+Node is started, it might be provided with a
+list of Peers, possibly from a configuration file in its local file
+system (<strong>LFS</strong>).
+Alternatively, it might learn a Peer&rsquo;s <strong>BaseNode</strong> details when
+the Peer connects to one of the node&rsquo;s endPoints.  In any case,
+the node maintains a table of Peer descriptors, including the public
+part of each Peer&rsquo;s RSA keys.</p>
+
+<h2>BaseNode Properties</h2>
+
+<p>A Peer shares
+<a href="https://jddixon.github.io/xlattice/baseNode.html">BaseNode</a>
+characteristics such as name,
+<a href="https://jddixon.github.io/xlattice/nodeID.html">NodeID</a>,
+RSA public keys, and
+<a href="https://jddixon.github.io/xlattice/overlay.html">Overlays</a>.</p>
+
+<h2>Other Properties</h2>
+
+<p>Most importantly a Node associates with each peer one or more
+<a href="https://jddixon.github.io/xlattice/connector.html">Connectors</a>.
+A Connector is essentially a recipe for establishing a connection
+to the Peer.  This will include</p>
+
+<ul>
+<li>a Gateway where necessary</li>
+<li>the Overlay through which the connection is to be made</li>
+<li>the Protocol to be used</li>
+<li>the Address of the Peer</li>
+</ul>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/peer">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="https://jddixon.github.io/xlattice/">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

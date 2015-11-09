@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>upax</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="appTop">XLattice Upax</h1>
+
+<p>A distributed content-keyed data storage system.</p>
+
+<h2>Current Implementation</h2>
+
+<p>A Upax implementation has three parts:</p>
+
+<ul>
+<li><a href="upaxServer.html">server</a>,</li>
+<li><a href="upaxClient.html">client</a>, and</li>
+<li><a href="ftLog.html">fault-tolerant log</a>.</li>
+</ul>
+
+<p>Upax accepts and stores data files of arbitrary size.  A data file is
+identified by its 256-bit/32-byte (SHA-256 or SHA3-256) content key.
+The content key is the hash of the file.</p>
+
+<p>Early versions
+of Upax will store a copy of a file on each participating server node.
+Later versions will store fewer copies, probably at least three,
+deleting the least recently used where storage capacity is neared
+and in effect migrating data to machines where it is more frequently
+used.</p>
+
+<p>Later implementations of  are expected to add a
+<a href="upaxMirror.html">UpaxMirror</a>
+which will be capable of dealing with client queries but not able to add
+to the data store.  That is, clients can use the UpaxMirror as a fast
+local cache, but to add files to the distributed storage system
+they will have to go through a UpaxServer instead.</p>
+
+<p>Upax servers and clients are
+<a href="https://jddixon.github.com/xlattice/node.html">XLattice nodes</a>
+and so are identified by
+unique 256 bit keys,
+<a href="https://jddixon.github.com/xlattice/nodeID.html">NodeIDs.</a>
+Each has a pair of RSA keys, one used
+for encryption and one used for digital signatures.  At least in the
+near term Upax servers will only accept messages from known hosts.
+Specifically, a client must prove that it has the private RSA key
+corresponding to its public RSA key when opening any connection to
+a server.</p>
+
+<p>In current implementations of Upax, files are owned by the first
+to commit them.  There is no notion of privacy.  Any client may
+request a copy of any file - but only the owner may delete it.  It
+is likely that upax_go will retain these characteristics in the near
+term.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/upax">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="https://jddixon.github.io/xlattice/">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

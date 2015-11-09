@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>endPoint</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice EndPoint</h1>
+
+<h2>XLattice Transport</h2>
+
+<p>XLattice
+<a href="https://jddixon.github.io/xlattice/node.html">Nodes</a>
+communicate by sending messages over connections.  The primitive
+notions common to all XLattice connections are</p>
+
+<ul>
+<li><a href="https://jddixon.github.com/xlattice/acceptor.html">Acceptor</a>,
+an EndPoint on which a Node listens</li>
+<li><a href="https://jddixon.github.com/xlattice/address.html">Address</a>,
+a sequence of bytes distinguishing EndPoints</li>
+<li><a href="https://jddixon.github.com/xlattice/connection.html">Connection</a>,
+a pair of EndPoints enabling communications between the Nodes at either end</li>
+<li><a href="https://jddixon.github.com/xlattice/connector.html">Connector</a>,
+an address and other information necessary to establish
+a connection to another Node</li>
+<li><a href="https://jddixon.github.com/xlattice/endPoint.html">EndPoint</a>,
+an address and a Transport</li>
+<li><a href="https://jddixon.github.com/xlattice/transport.html">Transport</a>,
+a name identifying a communications protocol</li>
+</ul>
+
+<h3>EndPoint</h3>
+
+<p>An EndPoint is identified by the associated Transport and an Address.
+The Address may include an explicit local part or there may be a
+default local part included with the Transport.  Thus for example
+the default local part associated with <code>http</code> is <code>80</code> and the default
+associated with <code>https</code> is <code>443</code>.</p>
+
+<p>As another example, for email the transport is <code>smtp</code> and there is
+no default Address or local part.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/endPoint">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="https://jddixon.github.io/xlattice/">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

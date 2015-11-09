@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>gateway</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice Gateway</h1>
+
+<p><a href="https://jddixon.github.io/xlattice">XLattice</a>
+is a library of software supporting
+<a href="https://en.wikipedia.org/wiki/Peer-to-peer">peer-to-peer</a>
+communications.  An XLattice network consists of two or more
+<a href="https://jddixon.github.io/xlattice/node.html">Nodes</a>,
+Each such Node has a cryptographic identity, meaning that it has secret
+keys, the public part of which is known to its peers, allowing them to
+easily establish secure, encrypted communications between them.  XLattice
+Nodes have interfaces to
+<a href="https://jddixon.github.io/xlattice/overlay.html">Overlays</a>
+such as the global Internet.</p>
+
+<p>A <strong>Gateway</strong> is an XLattice Node which facilitates communcations between
+Nodes which do not share a common Overlay.  Nodes may be for example on
+different
+<a href="https://en.wikipedia.org/wiki/intranet">private IP networks</a>
+or they might route traffic through an unusual protocol such as email
+(<a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">SMTP</a> or
+they may prefer to route traffic through a public service such as
+<a href="https://www.torproject.org">Tor</a>.</p>
+
+<p>A Gateway is not the same as a
+<a href="https://en.wikipedia.org/wiki/Router_(computing">router,</a>)
+although it may be resident on
+a router.  A Node communicating with an otherwise unreachable Node sends
+messages through an Internet Protocol (IP) network to the Gateway, which
+forwards the messages though an address on the remote Overlay to the
+destination Node.  The remote Node will route traffic back in the same
+manner, usually but not necessarily using the same Gateway.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/gateway">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="https://jddixon.github.io/xlattice/">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

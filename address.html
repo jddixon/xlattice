@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>address</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/ghp.css" />
+</head>
+<body>
+<div class="content">
+<h1 class="libTop">XLattice Address</h1>
+
+<h2>XLattice Transport</h2>
+
+<p>XLattice
+<a href="https://jddixon.github.io/xlattice/node.html">Nodes</a>
+communicate by sending messages over connections.  The primitive
+notions common to all XLattice connections are</p>
+
+<ul>
+<li><a href="https://jddixon.github.com/xlattice/acceptor.html">Acceptor</a>,
+an EndPoint on which a Node listens</li>
+<li><a href="https://jddixon.github.com/xlattice/address.html">Address</a>,
+a sequence of bytes distinguishing EndPoints</li>
+<li><a href="https://jddixon.github.com/xlattice/connection.html">Connection</a>,
+a pair of EndPoints enabling communications between the Nodes at either end</li>
+<li><a href="https://jddixon.github.com/xlattice/connector.html">Connector</a>,
+an address and other information necessary to establish
+a connection to another Node</li>
+<li><a href="https://jddixon.github.com/xlattice/endPoint.html">EndPoint</a>,
+an address and a Transport</li>
+
+<li><p><a href="https://jddixon.github.com/xlattice/transport.html">Transport</a>,
+a name identifying a communications protocol</p>
+
+<h3>Address</h3></li>
+</ul>
+
+<p>An Address is a sequence of bytes sufficient to distinguish a Node within
+a set of Addresses.  The Address may include a local part.  For example</p>
+
+<ul>
+<li>in
+<a href="https://en.wikipedia.org/wiki/IPv4"><strong>ipv4</strong></a>
+the Address must include a 32-bit value identifying the host
+and may include a 16-bit port number associated with a thread or process
+on that host.  The 32-bit limit restricts the number of hosts to roughly
+4 billion</li>
+<li>in
+<a href="https://en.wikipedia.org/wiki/IPv6"><strong>ipv6</strong></a>
+the main part of the Address is a 64-bit value instead, restricting
+the number of hosts to about 16 quintillion (<code>10^18</code>)</li>
+<li>a simple <strong>email</strong> address consists of a userID and a fully qualified domain
+name (so in <code>john.doe@example.com</code> the local part is <code>john.doe</code> and the
+domain name is <code>example.com</code>.</li>
+</ul>
+
+<p>In ipv4 and ipv6 it is necessary to distinguish the <strong>serialization</strong> of the
+Address from its binary form.  The main part of an ipv4 address, for example,
+is a 32-bit binary value in its wire form, but normally written as a
+<a href="https://en.wikipedia.org/wiki/Dot-decimal_notation"><strong>dotted quad</strong>,</a>
+<code>A.B.C.D</code>, in which each byte is represented by its decimal
+value, a number between <code>0</code> and <code>255</code> inclusive.</p>
+  <div class="f">
+    <hr />
+    <div class="license">
+      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+    </div>
+    <div class="project">
+      github <a href="https://github.com/jddixon/address">      <img src="img/GitHub-Mark-32px.png" 
+        alt="link to project"  
+        style="display: inline-block; margin-left: 0 auto; margin-right: 0 auto">
+       </a> project
+    </div>
+    <div class="logo" >
+      <a href="https://jddixon.github.io/xlattice/">
+      <img src="img/xlattice-2014.jpg" alt="the XLattice Project" style="float: right;" >
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
