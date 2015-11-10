@@ -19,26 +19,26 @@ EndPoint `x`.
 
 ## Examples of Overlays
 
-* the global Internet, `0/0`, a set of 32-bit addresses administered by 
+* the **global Internet**, `0/0`, a set of 32-bit addresses administered by
   [IANA](http://iana.org),
   the Internet Assigned Numbers Authority
-* private IP address space, small blocks of the global Internet reserved
+* **private IP address** space, small blocks of the global Internet reserved
   for private use; these are usually in `10/8` or `/16`s in  `192.168`
-* **email-mediated**, where gateways convert messages into email and then 
+* **email-mediated**, where gateways convert messages into email and then
   use conventional email protocols (`SMTP`) to transport and store messages
-* **data-keyed**, where machines exchange traffic through a content-keyed 
+* **data-keyed**, where machines exchange traffic through a content-keyed
   storage system
-* **name-keyed**, where systems exchange traffic through a distributed system 
+* **name-keyed**, where systems exchange traffic through a distributed system
   storing values by name (the key)
 
 ## Gateways
 
-A 
+A
 [Gateway](https://jddixon.github.io/xlatice/gateway.html)
-is an 
+is an
 [XLattice Node](https://jddixon.github.io/xlattice/node.html)
 which can be used for routing traffic between Overlays.  The Gateway
-can simply forward message with headers added or altered as necessary 
+can simply forward message with headers added or altered as necessary
 to route traffic, or the message content may be altered as necessitated
 for example by protocol switching or encryption.
 
