@@ -7,30 +7,29 @@
     * rough out XLattice abstractions
         - BaseNode                                                  * DONE
         - Cluster                                                   * DONE
-        - Connector
         - Gateway                                                   * DONE
         - Node                                                      * DONE
         - NodeID                                                    * DONE
-        - Overlay
+        - Overlay                                                   * DONE
         - Peer                                                      * DONE
-        - Protocol
-            * AesCnx
-        - Transport
+        - Protocol                                                  * DONE
+        - Transport                                                 * DONE
     * rough out related abstractions
-        - Acceptor
-        - Address
-        - AESCnx
-        - BaseNode
-        - BuildList
-        - Connei
-         Ctrie
-        - HAMT
-        - MerkleTree
-        - NLHTree
-        - rnglib
-        - U 
+        - Acceptor													* DONE
+        - Address													* DONE
+        - AesCnx													* DONE
+        - BaseNode													* DONE
+        - BuildList												    * DONE
+        - Connection												* DONE
+        - Connector													* DONE
+        - Ctrie													    * DONE
+        - HAMT													    * DONE
+        - MerkleTree												* DONE
+        - NLHTree													* DONE
+        - rnglib													* DONE
+        - U 												    	* DONE
     * rough out servers
-        - Upax
+        - Upax                                                      * DONE
         - xlReg                                                     * DONE
     
     * links from {README,index}.md to above

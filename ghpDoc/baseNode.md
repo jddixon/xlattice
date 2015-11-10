@@ -9,7 +9,7 @@ A BaseNode has
 
 1. a **name**, a convenience for testing; it need not be unique (although
    it is better if it is)
-2. a [**nodeID**](https://jddixon.github.io/xlattice/nodeID.html), a 20- 
+2. a [**nodeID**](https://jddixon.github.io/xlattice/nodeID.html), a 20-
    or 32-byte value, which should be globally unique
 3. an RSA key for use in encrypting small messages, its **commsKey**
 4. a second RSA key used for signing documents, its **sigKey**
@@ -28,8 +28,8 @@ to hash one or both of the node's **public** RSA keys to generate its nodeID.
 The RSA algorithm limits messages to something less than the key size,
 so a few hundred bytes.  RSA is also compute-intensive and so quite slow.
 Given these considerations, RSA is normally used only to set up a session
-and then a much faster block cipher such as AES is used to encrypt the rest 
-of the session traffic.  If the session is long-lived, the session key 
+and then a much faster block cipher such as AES is used to encrypt the rest
+of the session traffic.  If the session is long-lived, the session key
 might be renegotiated every hour or so.
 
 In this approach, one XLattice node (acting as the server) will publish
@@ -44,10 +44,10 @@ session key.
 It is widely believed that it is less safe to use the same keys for both
 encryption and digital signatures.  So the XLattice node has two RSA keys,
 the commsKey described above and then a second key, the sigKey, used for
-generating digital signatures.  
+generating digital signatures.
 
-Standard practice is to make an XLattice node's nodeID and the public 
-parts of the commsKey and sigKey available to all prospective Peers, 
+Standard practice is to make an XLattice node's nodeID and the public
+parts of the commsKey and sigKey available to all prospective Peers,
 so that the comms public key can be used to encrypt the secret message(s)
 used to initiate sessions and the sig public key can be used to verify
 digital signatures supposedly created using the server's sig private key.

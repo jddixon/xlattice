@@ -1,5 +1,11 @@
 xlattice/CHANGES
 
+v0.1.14
+    2015-11-10
+        * clean up markdown files (spaces at line ends)             SLOC 1756
+v0.1.13
+    2015-11-09
+        * XLattice logos lower right corner link to this pag        SLOC 1756
 v0.1.12
     2015-11-08
         * add ctries.md                                             SLOC 1753

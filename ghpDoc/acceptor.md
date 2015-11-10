@@ -4,7 +4,7 @@
 
 XLattice
 [Nodes](https://jddixon.github.io/xlattice/node.html)
-communicate by sending messages over connections.  The primitive 
+communicate by sending messages over connections.  The primitive
 notions common to all XLattice connections are
 
 * **Acceptor**, an EndPoint on which a Node listens
@@ -29,5 +29,5 @@ involves
   for handling the commuication, in particular the first message
   which the far Node sent to begin the session
 
-An Acceptor should normally be capable of handling some arbitrary 
+An Acceptor should normally be capable of handling some arbitrary
 number of connections, possibly a system-imposed limit.
