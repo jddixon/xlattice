@@ -34,7 +34,7 @@ EndPoint `x`.
 ## Gateways
 
 A
-[Gateway](https://jddixon.github.io/xlatice/gateway.html)
+[Gateway](https://jddixon.github.io/xlattice/gateway.html)
 is an
 [XLattice Node](https://jddixon.github.io/xlattice/node.html)
 which can be used for routing traffic between Overlays.  The Gateway

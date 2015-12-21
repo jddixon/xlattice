@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.15
+    2015-12-21
+        * fixed dead links                                          SLOC 1756
 v0.1.14
     2015-11-10
         * clean up markdown files (spaces at line ends)             SLOC 1756
