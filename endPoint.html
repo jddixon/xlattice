@@ -37,10 +37,16 @@ a name identifying a communications protocol</li>
 <h3>EndPoint</h3>
 
 <p>An EndPoint is identified by the associated Transport and an Address.
-The Address may include an explicit local part or there may be a
+The Address has either one or two parts.  For example, an IPV4 address
+has a 32-bit value and an optional local part.  The IPv4 address part
+is normally written as a <strong>dotted quad</strong> like <code>127.0.0.1</code>, where each
+number represents a byte in the range 0-255.  If it is present the
+IPv4 local part is a 16-bit value.</p>
+
+<p>The Address may include an explicit local part or there may be a
 default local part included with the Transport.  Thus for example
-the default local part associated with <code>http</code> is <code>80</code> and the default
-associated with <code>https</code> is <code>443</code>.</p>
+the default local part associated with the Transport <code>http</code> is <code>80</code>
+and the default associated with the Transport <code>https</code> is <code>443</code>.</p>
 
 <p>As another example, for email the transport is <code>smtp</code> and there is
 no default Address or local part.</p>
