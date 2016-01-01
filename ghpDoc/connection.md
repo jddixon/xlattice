@@ -26,8 +26,9 @@ notions common to all XLattice connections are
 
 A Connection is a established relationship between two EndPoints
 supporting the passage of messages between the two.  From the point of
-view of a participating host, the Connection will have a near EndPoint
-and a far EndPoint.  Both EndPoints must use the same protocol.
+view of a participating host, the Connection will have a **near** EndPoint
+(our end of the Connection) and a **far** EndPoint (the other, remote end of
+the Connection).  Both EndPoints must use the same protocol.
 Usually the Connection will have an associated State, and the Connection
 will proceed through an ordered sequence of States when it is being
 established, or the Connection will be closed.

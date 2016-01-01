@@ -24,10 +24,16 @@ notions common to all XLattice connections are
 ### EndPoint
 
 An EndPoint is identified by the associated Transport and an Address.
+The Address has either one or two parts.  For example, an IPV4 address
+has a 32-bit value and an optional local part.  The IPv4 address part
+is normally written as a **dotted quad** like `127.0.0.1`, where each
+number represents a byte in the range 0-255.  If it is present the 
+IPv4 local part is a 16-bit value.
+
 The Address may include an explicit local part or there may be a
 default local part included with the Transport.  Thus for example
-the default local part associated with `http` is `80` and the default
-associated with `https` is `443`.
+the default local part associated with the Transport `http` is `80` 
+and the default associated with the Transport `https` is `443`.
 
 As another example, for email the transport is `smtp` and there is
 no default Address or local part.

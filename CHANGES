@@ -1,5 +1,11 @@
 xlattice/CHANGES
 
+<<<<<<< HEAD
+=======
+v0.1.16
+    2015-12-31
+        * add rough rnglib; tidy up Connection, EndPoint, index     SLOC 1767
+>>>>>>> devel
 v0.1.15
     2015-12-21
         * fixed dead links                                          SLOC 1756
