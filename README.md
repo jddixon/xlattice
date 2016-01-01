@@ -1,4 +1,4 @@
-# The XLattice Project
+# xlattice
 
 ## Components
 

@@ -31,12 +31,12 @@ is indented by a number of spaces equivalent to its depth in the hierarchy.
 	 fileForHash0 0123456789012345678901234567890123456789
 	 fileForHash1 abcdef0123456789abcdef0123456789abcdef01
 	dir11
-	  fileForHash2 12abcdef0123456789abcdef0123456789abcdef
-	  fileForHash3 3456abcdef0123456789abcdef0123456789abcd
+	 fileForHash2 12abcdef0123456789abcdef0123456789abcdef
+	 fileForHash3 3456abcdef0123456789abcdef0123456789abcd
 	# END CONTENT #
 
 That is, the data structure between the BEGIN/END CONTENT lines is an
-[NLHTree](http://jddixon.github.io/nlhtree).
+[NLHTree](http://jddixon.github.io/nlhtree_py).
 
 ## Digital Signature
 

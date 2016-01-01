@@ -39,7 +39,7 @@ content key.  If the data is present, its metadata plus the data file
 will be returned.
 
 A client may also retrieve data from
-[Upax mirrors](https://jddixon.github.com/xlattice/upaxMirrog.html).
+[Upax mirrors](https://jddixon.github.com/xlattice/upaxMirror.html).
 These maintain
 a copy of the Upax cluster's commit log and copies of at least some
 of the files stored in the Upax cluster.
