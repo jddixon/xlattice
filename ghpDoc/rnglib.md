@@ -1,6 +1,6 @@
 # rnglib
 
-A random number generator and associated classes 
+A random number generator and associated classes
 especially useful for generating
 quasi-random strings, data files, and directory trees containing
 random numbers of data files with random names and random content.
