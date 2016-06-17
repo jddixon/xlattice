@@ -4,8 +4,13 @@ if [ ! -z "${DEV_BASE// }" ]
 then
   cd $DEV_BASE/xlattice
   
+  blListGen \
+    -d ../xlattice \
+    -1L  \
+    -u $DVCZ_UDIR \
+    -X .ssh \
+    $@
   
-  pySloc  -v $@
 else
   echo "DEV_BASE is not defined"
 fi

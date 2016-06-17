@@ -53,7 +53,7 @@ These are servers and tools used by or using XLattice components.
 
 The original 2003-2006 XLattice project can be seen
 [here](http://www.xlattice.org) and on
-[sourceforge](http://xlattice.sourceforge.net).  
+[sourceforge](http://xlattice.sourceforge.net).
 A somewhat modified version of this code is also available at
 [github](https://github.com/jddixon/xlattice_java).
 
