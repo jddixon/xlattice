@@ -1,5 +1,12 @@
 xlattice/CHANGES
 
+v0.1.19
+    2016-06-17
+        * not counting *.md
+        * update .dvcz, bkp2U, other bash scripts                   SLOC   86
+v0.1.18
+    2016-02-28
+        * update LICENSE                                            SLOC 1807
 v0.1.17
     2016-01-07
         * added some explantory material to {README,index}.md       SLOC 1807
@@ -62,6 +69,10 @@ v0.1.0
 v0.0.0
     2015-10-17
         initial commit                                              SLOC   5
+
+
+
+
 
 
 

@@ -5,7 +5,6 @@ then
   cd $DEV_BASE/xlattice
   
   
-  pySloc  -v $@
 else
   echo "DEV_BASE is not defined"
 fi

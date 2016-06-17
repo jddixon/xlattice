@@ -1,5 +1,8 @@
 ~/dev//xlattice/TODO
 
+2016-06-09
+    * add version number in .dvcz
+
 2015-10-18
     * BUG IN pySloc: *.md files in ghpDoc not counted               * FIXED
 
