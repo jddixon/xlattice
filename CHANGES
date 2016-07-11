@@ -1,5 +1,8 @@
 xlattice/CHANGES
 
+v0.1.20
+    2016-07-11
+        * add ghpDoc/{css,img}                                      SLOC  580
 v0.1.19
     2016-06-17
         * not counting *.md
@@ -69,6 +72,7 @@ v0.1.0
 v0.0.0
     2015-10-17
         initial commit                                              SLOC   5
+
 
 
 
