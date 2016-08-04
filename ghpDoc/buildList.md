@@ -1,5 +1,11 @@
 # buildList
 
+A BuildList is a view of the contents of a directory tree at some particular
+moment in time.  Its authenticity is guaranteed by the holder of an RSA key
+whose public part appears at the top of the BuildList.  It may be digitally
+signed by the key holder, allowing a single-operation check on its validity.
+Files in the BuildList are identified by name and by an SHA content key.
+
 ## Serialization
 
 In its serialized form a BuildList consists of
@@ -12,18 +18,45 @@ In its serialized form a BuildList consists of
 Each of the lines ends with a linefeed (a byte with the value 10,
 conventionally written as \\n).
 
-A blank line follows the last content line.  The timestamp (in
-CCYY-MM-DD HH:MM:SS form) represents the time at which the list
-was signed using the RSA private key corresponding to the key in
-the public key line.  The public key itself is base-64 encoded.
+A blank line follows the last content line.
+
+The timestamp (in CCYY-MM-DD HH:MM:SS form) represents the time at which
+the list was signed using the RSA private key corresponding to the key in
+the public key line.
+
+The public key itself is base-64 encoded.
+
+An example of a correctly formatted BuildList header:
+
+    -----BEGIN RSA PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoM2sBgX0ChP2JriXkOxS
+    e2FjHYVzBGkNvgf0vIAa7FFYZi2pWmxBAVXgl3tTiB3quqqud/MbKqdejM6gkKBK
+    v8f7hlcBQLD6BLIZ/RRfhIElc+WlDVfKSnBTB4va5qTQAgvuq5i8+oMj7G8WEy5d
+    7cYucWyUJMtHvT4pCDtBWeeqQ62tByWjv34Ud/+A9Mjf0leiWxM3tiToVsqIKb4s
+    zPjEShF9rvcNa9XEy1dKpcDz9Szbm2SlxOgM83fDDGtOq4SSCSqndtxrOvXXPB57
+    H1mJV/FmerbXRPm5ERJVNIxtLk7Gr2Ce45FVlWyJGMhpfVlKkkk+bRQ02OFfazJI
+    GQIDAQAB
+    -----END RSA PUBLIC KEY-----
+    optionz v0.1.11
+    2016-08-02 22:27:12
+    # BEGIN CONTENT #
 
 ## Content Lines
 
 The content lines section begins and ends with fixed `# BEGIN CONTENT #`
 and `# END CONTENT #` delimiters.  Each actual content line consists of
+
 * either a directory name or
-* a file name followed by its content hash.
-In either case the name
+* a file name followed by its `content hash` in hexadecimal form.
+
+The **content hash** is calculated from the file contents using one of
+the forms of the **Secure Hash Algorithm**, either **SHA1**, yielding a
+40-character hex value, or **SHA2**, yielding a 64-character value.
+SHA is a one-way hash, meaning that it is easy to calculate the hash
+but extremely difficult or impossible to perform the reverse operation,
+identifying a document from its hash.
+
+The name in a content lne
 is indented by a number of spaces equivalent to its depth in the hierarchy.
 
 	# BEGIN CONTENT #
