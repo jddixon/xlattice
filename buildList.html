@@ -12,30 +12,41 @@
 <h1>buildList</h1>
 
 <p>A BuildList is a view of the contents of a directory tree at some particular
-moment in time.  Its authenticity is guaranteed by the holder of an RSA key
-whose public part appears at the top of the BuildList.  It may be digitally
-signed by the key holder, allowing a single-operation check on its validity.
-Files in the BuildList are identified by name and by an SHA content key.</p>
+moment in time.  Its authenticity is usually guaranteed by the holder of an
+<a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem">RSA</a>) key
+whose public part appears at the top of the BuildList.  The keyholder makes
+the guarantee my appending a digital signature to the BuildList,
+allowing a single-operation check on the BuildList&rsquo;s validity.
+Files in the BuildList are identified by name and by an
+<a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorighm">SHA</a>
+<strong>content key</strong>, where the content key is the SHA hash of the content
+of a file..</p>
 
 <h2>Serialization</h2>
 
-<p>In its serialized form a BuildList consists of
-* a public key line,
-* a title line,
-* a timestamp line,
-* a number of content lines, and
-* optionally a digital signature.</p>
+<p>In its serialized form a BuildList consists of</p>
 
-<p>Each of the lines ends with a linefeed (a byte with the value 10,
-conventionally written as \n).</p>
+<ul>
+<li>a public key line,</li>
+<li>a title line,</li>
+<li>a timestamp line,</li>
+<li>a fixed-format <code>## BEGIN CONTENT ##</code> line,</li>
+<li>a number of content lines,</li>
+<li>a fixed-format <code>## END CONTENT ##</code> line,</li>
+<li>and optionally a digital signature.</li>
+</ul>
+
+<p>Each of the lines ends with a linefeed (a byte with the value <code>10</code>,
+conventionally written as <code>\\n</code>).</p>
 
 <p>A blank line follows the last content line.</p>
 
-<p>The timestamp (in CCYY-MM-DD HH:MM:SS form) represents the time at which
+<p>The timestamp (in <code>CCYY-MM-DD HH:MM:SS</code> form) represents the time at which
 the list was signed using the RSA private key corresponding to the key in
 the public key line.</p>
 
-<p>The public key itself is base-64 encoded.</p>
+<p>The public key itself is
+<a href="https://en.wikipedia.org/wiki/Base64">base-64</a> encoded.</p>
 
 <p>An example of a correctly formatted BuildList header:</p>
 
@@ -88,13 +99,15 @@ dir11
 
 <h2>Digital Signature</h2>
 
-<p>The SHA1withRSA digital signature is over the entire SignedList excluding
+<p>The <strong>SHA1withRSA</strong>
+<a href="https://en.wikipedia.org/wiki/Digital_signature">digital signature</a>
+is over the entire SignedList excluding
 the digital signature line and the blank line preceding it.  All line
 endings are converted to LF (&rsquo;\n&rsquo;) before taking the digital signature.</p>
 
 <h2>Extended Hash</h2>
 
-<p>The BuildList itself has a 20-byte extended hash, the 20-byte SHA1
+<p>The BuildList itself has a 20-byte <strong>extended hash</strong>, the 20-byte SHA1
 digest of a function of the public key and the title.  This means
 that the owner of the RSA key can create any number of documents
 with the same hash but different timestamps with the intention
@@ -103,7 +116,7 @@ recent timestamp as current.</p>
   <div class="f">
     <hr />
     <div class="license">
-      <p><a href="LICENSE.html">SOFTWARE LICENSE</a></p>
+      <p><a href="LICENSE-MIT.html">SOFTWARE LICENSE</a></p>
     </div>
     <div class="project">
       github <a href="https://github.com/jddixon/buildList">      <img src="img/GitHub-Mark-32px.png" 
