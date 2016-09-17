@@ -1,30 +1,39 @@
 # buildList
 
 A BuildList is a view of the contents of a directory tree at some particular
-moment in time.  Its authenticity is guaranteed by the holder of an RSA key
-whose public part appears at the top of the BuildList.  It may be digitally
-signed by the key holder, allowing a single-operation check on its validity.
-Files in the BuildList are identified by name and by an SHA content key.
+moment in time.  Its authenticity is usually guaranteed by the holder of an 
+[RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) key
+whose public part appears at the top of the BuildList.  The keyholder makes
+the guarantee my appending a digital signature to the BuildList,
+allowing a single-operation check on the BuildList's validity.
+Files in the BuildList are identified by name and by an 
+[SHA](https://en.wikipedia.org/wiki/Secure_Hash_Algorighm) 
+**content key**, where the content key is the SHA hash of the content
+of a file..
 
 ## Serialization
 
 In its serialized form a BuildList consists of
+
 * a public key line,
 * a title line,
 * a timestamp line,
-* a number of content lines, and
-* optionally a digital signature.
+* a fixed-format `## BEGIN CONTENT ##` line,
+* a number of content lines,
+* a fixed-format `## END CONTENT ##` line,
+* and optionally a digital signature.
 
-Each of the lines ends with a linefeed (a byte with the value 10,
-conventionally written as \\n).
+Each of the lines ends with a linefeed (a byte with the value `10`,
+conventionally written as `\\n`).
 
 A blank line follows the last content line.
 
-The timestamp (in CCYY-MM-DD HH:MM:SS form) represents the time at which
+The timestamp (in `CCYY-MM-DD HH:MM:SS` form) represents the time at which
 the list was signed using the RSA private key corresponding to the key in
 the public key line.
 
-The public key itself is base-64 encoded.
+The public key itself is 
+[base-64](https://en.wikipedia.org/wiki/Base64) encoded.
 
 An example of a correctly formatted BuildList header:
 
@@ -73,13 +82,15 @@ That is, the data structure between the BEGIN/END CONTENT lines is an
 
 ## Digital Signature
 
-The SHA1withRSA digital signature is over the entire SignedList excluding
+The **SHA1withRSA**
+[digital signature](https://en.wikipedia.org/wiki/Digital_signature)
+is over the entire SignedList excluding
 the digital signature line and the blank line preceding it.  All line
 endings are converted to LF ('\\n') before taking the digital signature.
 
 ## Extended Hash
 
-The BuildList itself has a 20-byte extended hash, the 20-byte SHA1
+The BuildList itself has a 20-byte **extended hash**, the 20-byte SHA1
 digest of a function of the public key and the title.  This means
 that the owner of the RSA key can create any number of documents
 with the same hash but different timestamps with the intention

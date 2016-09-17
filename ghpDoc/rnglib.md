@@ -25,7 +25,7 @@ often important for debugging.
 extremely difficult or impossible to predict the next number
 generated in a sequence.  It is based on the system's `/dev/urandom`.
 This relies in part upon
-[entropy](https://en.wikipedia.org/wiki/Entropy (Computing))
+[entropy](https://en.wikipedia.org/wiki/Entropy %28Computing%29
 accumulated by the system; when
 this is insufficient (when we run out of entropy) it will revert to using
 a very secure programmable random number generator.

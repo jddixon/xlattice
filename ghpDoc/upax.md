@@ -2,17 +2,34 @@
 
 A distributed content-keyed data storage system.
 
-## Current Implementation
+## Planned Implementations
 
-A Upax implementation has three parts:
+A Upax implementation has four main parts:
 
 * [server](upaxServer.html),
 * [client](upaxClient.html), and
+* [mirror](upaxMirror.html), and
 * [fault-tolerant log](ftLog.html).
 
 Upax accepts and stores data files of arbitrary size.  A data file is
-identified by its 256-bit/32-byte (SHA-256 or SHA3-256) content key.
-The content key is the hash of the file.
+identified by its 160-bit/20-byte
+[SHA1](httpw://en.wikipedia.org/wiki/SHA-1)
+or 256-bit/32-byte
+[SHA256](httpw://en.wikipedia.org/wiki/SHA-2)
+content key.  The content key is the hash of the file.  It is guaranteed
+to be unique to the file.  Despite intensive efforts over the last 15 years
+or so no two documents with the same content hash have been discovered or
+contrived.
+
+The servers involved use a
+[consensus algorithm](https://en.wikipedia.org/wiki/Consensus_%28computer_science%29)
+such as
+[Raft](https://raft.github.io)
+or
+[Paxos](https:/en.sikipedia.org/wiki/Paxos_%28computer_science%29)
+to ensure that their pictures of the state of the distributed file system
+are consistent.
+
 
 Early versions
 of Upax will store a copy of a file on each participating server node.
@@ -32,7 +49,7 @@ Upax servers and clients are
 [XLattice nodes](https://jddixon.github.com/xlattice/node.html)
 and so are identified by
 unique 256 bit keys,
-[NodeIDs.](https://jddixon.github.com/xlattice/nodeID.html)
+[NodeIDs](https://jddixon.github.com/xlattice/nodeID.html).
 Each has a pair of RSA keys, one used
 for encryption and one used for digital signatures.  At least in the
 near term Upax servers will only accept messages from known hosts.
